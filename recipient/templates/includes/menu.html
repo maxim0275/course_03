@@ -1,6 +1,7 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+<nav  aria-label="Main navigation">
+<nav  aria-label="Main navigation">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Сервис рассылок</a>
+    <a class="navbar-brand" href="#">Рассылки</a>
     <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,7 +18,7 @@
         </li>
         <li class="nav-item">
           {% if user.is_authenticated %}
-          <a class="nav-link" href='/recipient/new/'>Добавить клиента</a>
+          <a class="nav-link" href='/recipient/new/'>Создать клиента</a>
           {% endif %}
         </li>
         <li class="nav-item">
@@ -27,7 +28,7 @@
         </li>
         <li class="nav-item">
           {% if user.is_authenticated %}
-          <a class="nav-link" href='/message/new/'>Добавить сообщение</a>
+          <a class="nav-link" href='/message/new/'>Создать сообщение</a>
           {% endif %}
         </li>
         <li class="nav-item">
@@ -37,7 +38,7 @@
         </li>
         <li class="nav-item">
           {% if user.is_authenticated %}
-          <a class="nav-link" href="/mailing/new/">Добавить рассылку</a>
+          <a class="nav-link" href="/mailing/new/">Создать рассылку</a>
           {% endif %}
         </li>
         <li class="nav-item">

@@ -6,12 +6,16 @@ from django.views.generic import ListView, DetailView
 
 from message.forms import MessageForm
 from message.models import Message
+from message.services import get_messages_from_cache
 
 
 class MessageListView(ListView):
     model = Message
     template_name = 'message_list.html'
     context_object_name = 'mail_messages'
+
+    def get_queryset(self):
+        return get_messages_from_cache()
 
 
 class MessageDetailView(LoginRequiredMixin, DetailView):
