@@ -44,7 +44,7 @@ class MessageUpdateView(LoginRequiredMixin, UpdateView):
         obj = super().get_object()
         if obj.owner == self.request.user:
             return super().dispatch(request, *args, **kwargs)
-        return HttpResponseForbidden('Вы не можете редактировать сообщения.')
+        return HttpResponseForbidden('Нет прав редактировать сообщения.')
 
 
 class MessageDeleteView(LoginRequiredMixin, DeleteView):
@@ -56,4 +56,4 @@ class MessageDeleteView(LoginRequiredMixin, DeleteView):
         obj = super().get_object()
         if obj.owner == self.request.user:
             return super().dispatch(request, *args, **kwargs)
-        return HttpResponseForbidden('Вы не можете удалять сообщения.')
+        return HttpResponseForbidden('Нет прав удалять сообщения.')
